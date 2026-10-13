@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sussma Senthil Kumar | Data & BI Analyst</title>
+<meta name="description" content="Sussma Senthil Kumar: Data & BI Analyst (Power BI PL-300, SQL, Tableau, Python) based in Portland, Oregon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8fafc; --card:#ffffff; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0;
+  --accent:#2563eb; --accent-ink:#ffffff; --pill:#eff6ff; --pill-ink:#1d4ed8;
+  --soft:#f1f5f9; --shadow:0 1px 2px rgba(15,23,42,.04),0 4px 16px rgba(15,23,42,.05);
+}
+:root[data-theme="dark"]{
+  --bg:#0b1220; --card:#111a2e; --ink:#e2e8f0; --muted:#94a3b8; --line:#1e293b;
+  --accent:#3b82f6; --pill:#172554; --pill-ink:#bfdbfe; --soft:#0f1a30; --shadow:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;transition:background .2s,color .2s}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.brand{font-weight:700;font-size:1.05rem;color:var(--ink);white-space:nowrap}
+.actions{display:flex;gap:8px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:10px;font-weight:600;font-size:.88rem;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-family:inherit;white-space:nowrap}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{filter:brightness(.97)}
+.btn svg{width:16px;height:16px}
+.navrow{display:flex;gap:6px;overflow-x:auto;padding:0 0 12px;scrollbar-width:none}
+.navrow::-webkit-scrollbar{display:none}
+.navrow a{color:var(--muted);font-size:.9rem;font-weight:500;padding:6px 12px;border-radius:999px;white-space:nowrap}
+.navrow a:hover,.navrow a.on{background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
+
+/* hero */
+.hero{padding:72px 0 56px;text-align:center}
+.hero .hi{display:inline-block;font-size:.85rem;font-weight:600;color:var(--pill-ink);background:var(--pill);padding:5px 14px;border-radius:999px;margin-bottom:18px}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.1;margin:0 0 10px;font-weight:800;letter-spacing:-.02em}
+.hero .role{font-size:clamp(1.15rem,2.6vw,1.45rem);font-weight:600;color:var(--accent);margin:0 0 8px}
+.hero .tag{font-size:1.1rem;color:var(--muted);margin:0 auto 22px;max-width:620px}
+.hero .intro{max-width:680px;margin:0 auto 28px;color:var(--ink);opacity:.85}
+.hero .cta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.hero .cta .btn{padding:11px 18px;font-size:.95rem}
+
+/* sections */
+section{padding:56px 0}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
+h2{font-size:clamp(1.6rem,3.5vw,2.1rem);margin:0 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 28px;max-width:640px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{background:var(--pill);color:var(--pill-ink);font-size:.8rem;font-weight:500;padding:4px 11px;border-radius:999px}
+.pill.gray{background:var(--soft);color:var(--muted)}
+h3{margin:0 0 4px;font-size:1.08rem}
+.meta{color:var(--muted);font-size:.88rem}
+
+/* bio */
+.bio{display:grid;grid-template-columns:260px 1fr;gap:18px}
+.who .avatar{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,#2563eb,#0ea5e9);color:#fff;display:grid;place-items:center;font-weight:800;font-size:1.4rem;margin-bottom:14px}
+.who .row{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:.9rem;margin-top:6px}
+.who .row svg{width:16px;height:16px;flex:none}
+.bio p{margin:0 0 14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.stat{background:var(--soft);border-radius:12px;padding:14px}
+.stat b{display:block;font-size:1.5rem;color:var(--accent);line-height:1.1}
+.stat span{font-size:.8rem;color:var(--muted)}
+@media(max-width:760px){.bio{grid-template-columns:1fr}.stats{grid-template-columns:1fr}}
+
+/* skills */
+.skill h3{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.ico{width:34px;height:34px;border-radius:10px;background:var(--pill);color:var(--pill-ink);display:grid;place-items:center;flex:none}
+.ico svg{width:18px;height:18px}
+
+/* experience */
+.job{display:grid;grid-template-columns:1fr auto;gap:4px 16px}
+.job .when{font-size:.82rem;font-weight:600;color:var(--pill-ink);background:var(--pill);padding:3px 10px;border-radius:999px;height:fit-content;white-space:nowrap}
+.job ul{grid-column:1/-1;margin:12px 0 14px;padding-left:18px}
+.job li{margin-bottom:6px;font-size:.95rem}
+.job .pills{grid-column:1/-1}
+@media(max-width:600px){.job{grid-template-columns:1fr}.job .when{justify-self:start;margin-top:6px}}
+
+/* projects */
+.proj{display:flex;flex-direction:column}
+.proj .head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.status{font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.status.wip{background:#fef3c7;color:#92400e}
+.status.done{background:#dcfce7;color:#166534}
+.status.pub{background:#ede9fe;color:#5b21b6}
+.proj p{font-size:.95rem;margin:10px 0 16px;flex:1}
+.proj .link{font-weight:600;font-size:.9rem;margin-top:12px}
+
+/* certs */
+.cert{display:flex;gap:14px;align-items:flex-start}
+
+/* edu */
+.edu .courses{margin-top:12px}
+
+footer{padding:48px 0 56px;text-align:center}
+footer .card{max-width:720px;margin:0 auto}
+footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:18px}
+.copy{color:var(--muted);font-size:.85rem;margin-top:28px}
+@media(max-width:520px){.hide-sm{display:none}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="#top">Sussma Senthil Kumar</a>
+      <div class="actions">
+        <a class="btn primary" href="https://www.linkedin.com/in/sussma-senthilkumar/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.83-3-1.83 0-2.1 1.43-2.1 2.9V21H9z"/></svg>
+          LinkedIn</a>
+        <button class="btn" id="theme" type="button" aria-label="Toggle dark mode">
+          <svg id="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <span class="hide-sm" id="tl">Dark mode</span></button>
+      </div>
+    </div>
+    <nav class="navrow">
+      <a href="#bio">Bio</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#certifications">Certifications</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero" id="top"><div class="wrap">
+  <span class="hi">Open to Data, BI &amp; Business Analyst roles</span>
+  <h1>Sussma Senthil Kumar</h1>
+  <p class="role">Data &amp; BI Analyst</p>
+  <p class="tag">Turning messy data into decisions people use.</p>
+  <p class="intro">Microsoft Certified Power BI Data Analyst with an M.S. in Business Analytics from the University of Illinois Urbana-Champaign. I build dashboards, clean up data pipelines, and translate business questions into answers across healthcare, software, and retail.</p>
+  <div class="cta">
+    <a class="btn primary" href="#projects">View projects</a>
+    <a class="btn" href="Sussma_Senthil_Kumar_Resume.pdf" target="_blank" rel="noopener">Download resume</a>
+    <a class="btn" href="mailto:sussma.s@gmail.com">Email me</a>
+  </div>
+</div></header>
+
+<main>
+
+<section id="bio"><div class="wrap">
+  <p class="eyebrow">Bio</p>
+  <h2>Clear data. Useful answers.</h2>
+  <p class="sub">A little about how I work and what I bring to a team.</p>
+  <div class="bio">
+    <div class="card who">
+      <div class="avatar">SS</div>
+      <h3>Sussma Senthil Kumar</h3>
+      <div class="meta">Data &amp; BI Analyst</div>
+      <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Portland, Oregon</div>
+      <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:sussma.s@gmail.com">sussma.s@gmail.com</a></div>
+      <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="m8.5 12.5-1.5 8.5 5-3 5 3-1.5-8.5"/></svg>PL-300 Certified</div>
+    </div>
+    <div class="card">
+      <p>I'm a data analyst who likes the messy middle: pulling data from many sources, finding where it breaks, and shaping it into dashboards and reports that people actually open. At Amgen I integrated clinical and physician data from 15+ sources and cut reporting errors by 25%. At VJH Software I worked directly with clients to turn their questions into Power BI dashboards.</p>
+      <p>Most recently I ran operations and analytics for my family's fuel dealership, where I built the reporting that tracked sales, margins, and receivables. I'm open to analytics roles in any industry.</p>
+      <div class="pills">
+        <span class="pill">Power BI</span><span class="pill">SQL</span><span class="pill">Tableau</span><span class="pill">Python</span><span class="pill">Data Quality</span><span class="pill">Stakeholder Communication</span><span class="pill">Business Analysis</span>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>15+</b><span>Power BI dashboards for finance, sales &amp; ops</span></div>
+        <div class="stat"><b>25%</b><span>fewer reporting errors at Amgen</span></div>
+        <div class="stat"><b>40%</b><span>faster reporting after SQL → PySpark</span></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <p class="eyebrow">Skills</p>
+  <h2>Tools I use every day</h2>
+  <p class="sub">Grouped by how I use them on the job.</p>
+  <div class="grid g2">
+    <div class="card skill">
+      <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg></span>BI &amp; Visualization</h3>
+      <div class="pills"><span class="pill">Power BI</span><span class="pill">DAX</span><span class="pill">Power Query</span><span class="pill">Tableau</span><span class="pill">Excel</span><span class="pill">Data Storytelling</span></div>
+    </div>
+    <div class="card skill">
+      <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>Data &amp; Engineering</h3>
+      <div class="pills"><span class="pill">SQL</span><span class="pill">Python (Pandas, NumPy)</span><span class="pill">PySpark</span><span class="pill">Azure Databricks</span><span class="pill">AWS Redshift</span><span class="pill">Airflow</span></div>
+    </div>
+    <div class="card skill">
+      <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 17 6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>Analytics &amp; Statistics</h3>
+      <div class="pills"><span class="pill">Forecasting</span><span class="pill">Segmentation</span><span class="pill">Cohort Analysis</span><span class="pill">A/B Testing</span><span class="pill">Regression</span><span class="pill">R</span></div>
+    </div>
+    <div class="card skill">
+      <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span>Business Analysis</h3>
+      <div class="pills"><span class="pill">Requirements Gathering</span><span class="pill">Process Mapping</span><span class="pill">UAT</span><span class="pill">Agile / Jira</span><span class="pill">Stakeholder Communication</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <p class="eyebrow">Work Experience</p>
+  <h2>Where I've done the work</h2>
+  <p class="sub">Data, BI, and operations roles across healthcare, software, and retail/distribution.</p>
+  <div class="grid">
+    <div class="card job">
+      <div><h3>Operations &amp; Analytics Lead</h3><div class="meta">KCS Aagency – BPCL Dealer (Family Business) · Erode, India</div></div>
+      <span class="when">Nov 2024 – Aug 2026</span>
+      <ul>
+        <li>Built Excel and Tableau dashboards on sales, margins, customer activity, and receivables, supporting a 25% increase in sales and a 30% improvement in profitability.</li>
+        <li>Redesigned billing, payment, and reconciliation workflows, improving accuracy and visibility into balances.</li>
+        <li>Led a 6–15 person team and managed relationships with customers and the supplier (BPCL).</li>
+      </ul>
+      <div class="pills"><span class="pill gray">Excel</span><span class="pill gray">Tableau</span><span class="pill gray">Process Improvement</span></div>
+    </div>
+    <div class="card job">
+      <div><h3>Data Engineer</h3><div class="meta">Amgen · Greater Chicago Area</div></div>
+      <span class="when">Sep 2023 – Oct 2024</span>
+      <ul>
+        <li>Integrated and analyzed clinical and primary care physician (PCP) data from 15+ sources (50GB+) using SQL, Python, Azure Databricks, and AWS Redshift.</li>
+        <li>Validated data and ran root-cause analysis on quality issues, reducing reporting errors by 25%.</li>
+        <li>Migrated 2,000+ lines of SQL to PySpark, making recurring reporting 40% faster.</li>
+      </ul>
+      <div class="pills"><span class="pill gray">SQL</span><span class="pill gray">PySpark</span><span class="pill gray">Azure Databricks</span><span class="pill gray">AWS Redshift</span></div>
+    </div>
+    <div class="card job">
+      <div><h3>Business Intelligence Analyst</h3><div class="meta">VJH Software · Chennai, India</div></div>
+      <span class="when">Jan 2022 – Jul 2022</span>
+      <ul>
+        <li>Worked directly with clients to gather requirements and turn them into specifications, reducing delivery time by 20%.</li>
+        <li>Built 15+ Power BI dashboards with DAX and Power Query for finance, sales, and operations.</li>
+        <li>Delivered 50+ client requests in an Agile environment with 95% on-time delivery.</li>
+      </ul>
+      <div class="pills"><span class="pill gray">Power BI</span><span class="pill gray">DAX</span><span class="pill gray">Client-facing</span><span class="pill gray">Agile</span></div>
+    </div>
+    <div class="card job">
+      <div><h3>Data Science Intern</h3><div class="meta">zBliss Technologies (zMed) · Remote</div></div>
+      <span class="when">May 2020 – Nov 2020</span>
+      <ul>
+        <li>Built healthcare ML models for early sepsis prediction (MIMIC-III ICU data) and COVID-19 detection from chest X-rays.</li>
+      </ul>
+      <div class="pills"><span class="pill gray">Python</span><span class="pill gray">TensorFlow</span><span class="pill gray">PyTorch</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <p class="eyebrow">Projects</p>
+  <h2>Things I've built</h2>
+  <p class="sub">Analytics, BI, and healthcare data projects, with code and dashboards linked where available.</p>
+  <div class="grid g2">
+    <div class="card proj">
+      <div class="head"><div><h3>Sales &amp; Customer Analytics</h3><div class="meta">SQL · Python · Tableau Public</div></div><span class="status wip">In progress</span></div>
+      <p>Revenue trends, product and country drivers, RFM customer segmentation, and monthly cohort retention on ~1M real e-commerce transactions (UCI Online Retail II).</p>
+      <div class="pills"><span class="pill">SQL</span><span class="pill">Python</span><span class="pill">Tableau</span><span class="pill">Cohort Analysis</span></div>
+    </div>
+    <div class="card proj">
+      <div class="head"><div><h3>Hospital Readmissions Analysis</h3><div class="meta">SQL · Power BI · DAX</div></div><span class="status wip">In progress</span></div>
+      <p>Which conditions, states, and hospitals drive excess readmissions under the CMS Hospital Readmissions Reduction Program, and how readmissions relate to hospital ratings.</p>
+      <div class="pills"><span class="pill">Power BI</span><span class="pill">DAX</span><span class="pill">SQL</span><span class="pill">Healthcare</span></div>
+    </div>
+    <div class="card proj">
+      <div class="head"><div><h3>Early Sepsis Prediction for ICU Patients</h3><div class="meta">zBliss Technologies · 2020</div></div><span class="status done">Completed</span></div>
+      <p>LSTM model on MIMIC-III ICU data (40,000+ patients) predicting sepsis 6, 12, and 18 hours before onset, reaching an AUROC of 0.97. Served through a Flask API.</p>
+      <div class="pills"><span class="pill">Python</span><span class="pill">TensorFlow</span><span class="pill">Time Series</span></div>
+    </div>
+    <div class="card proj">
+      <div class="head"><div><h3>Jaundice Prediction Using Machine Learning</h3><div class="meta">IJARIIT, Vol. 7, Issue 6</div></div><span class="status pub">Published</span></div>
+      <p>PCA and factor analysis on patient lab data to find key drivers (bilirubin was most significant), comparing logistic regression, tree-based, SVM, naive Bayes, and neural network models.</p>
+      <div class="pills"><span class="pill">Statistics</span><span class="pill">PCA</span><span class="pill">Logistic Regression</span></div>
+      <a class="link" href="https://www.ijariit.com/manuscripts/v7i6/V7I6-1394.pdf" target="_blank" rel="noopener">Read the paper →</a>
+    </div>
+    <div class="card proj">
+      <div class="head"><div><h3>Restaurant Market Analysis with the Yelp API</h3><div class="meta">University of Illinois Urbana-Champaign</div></div><span class="status done">Completed</span></div>
+      <p>Pulled business data from the Yelp API into a relational database and used SQL to map and compare competitors, informing where and how to open a new restaurant.</p>
+      <div class="pills"><span class="pill">SQL</span><span class="pill">API</span><span class="pill">Competitive Analysis</span></div>
+    </div>
+    <div class="card proj">
+      <div class="head"><div><h3>COVID-19 Detection from Chest X-Rays</h3><div class="meta">zBliss Technologies · 2020</div></div><span class="status done">Completed</span></div>
+      <p>Transfer-learning model (DenseNet) classifying chest X-rays as COVID-19, bacterial pneumonia, viral pneumonia, or normal, with Grad-CAM heatmaps showing what drove each prediction.</p>
+      <div class="pills"><span class="pill">Python</span><span class="pill">PyTorch</span><span class="pill">Medical Imaging</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="certifications"><div class="wrap">
+  <p class="eyebrow">Certifications</p>
+  <h2>Formal recognition of skills</h2>
+  <p class="sub">Industry credentials I've earned.</p>
+  <div class="grid g2">
+    <div class="card cert">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="m8.5 12.5-1.5 8.5 5-3 5 3-1.5-8.5"/></svg></span>
+      <div><h3>Power BI Data Analyst Associate (PL-300)</h3><div class="meta">Microsoft Certified</div></div>
+    </div>
+    <div class="card cert">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="m8.5 12.5-1.5 8.5 5-3 5 3-1.5-8.5"/></svg></span>
+      <div><h3>Jira Fundamentals</h3><div class="meta">Atlassian</div></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <p class="eyebrow">Education</p>
+  <h2>Academic foundation</h2>
+  <p class="sub">Business analytics on top of a quantitative computing degree.</p>
+  <div class="grid g2">
+    <div class="card edu">
+      <h3>M.S. in Management, Business Analytics</h3>
+      <div class="meta">University of Illinois Urbana-Champaign · 2023 · GPA 3.85</div>
+      <div class="pills courses"><span class="pill gray">Data Storytelling</span><span class="pill gray">Communicating with Data</span><span class="pill gray">Enterprise Database Management</span></div>
+    </div>
+    <div class="card edu">
+      <h3>Integrated M.Sc., Decision &amp; Computing Sciences</h3>
+      <div class="meta">Coimbatore Institute of Technology (Anna University) · 2022 · CGPA 8.51/10</div>
+      <div class="pills courses"><span class="pill gray">Applied Statistics for Business Decisions</span><span class="pill gray">Predictive Analytics</span><span class="pill gray">Data Warehousing &amp; Mining</span></div>
+    </div>
+  </div>
+</div></section>
+
+</main>
+
+<footer id="contact"><div class="wrap">
+  <div class="card">
+    <p class="eyebrow">Contact</p>
+    <h2>Let's talk</h2>
+    <p class="sub" style="margin:0 auto">Open to Data Analyst, BI Analyst, and Business Analyst roles, remote or in the Portland area.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:sussma.s@gmail.com">sussma.s@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/sussma-senthilkumar/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/GITHUB_USERNAME" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="Sussma_Senthil_Kumar_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+    </div>
+  </div>
+  <p class="copy">© 2026 Sussma Senthil Kumar</p>
+</div></footer>
+
+<script>
+(function(){
+  var root=document.documentElement, b=document.getElementById('theme'), l=document.getElementById('tl'), i=document.getElementById('ti');
+  var moon='<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+  var sun='<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
+  function set(t){root.setAttribute('data-theme',t);l.textContent=t==='dark'?'Light mode':'Dark mode';i.innerHTML=t==='dark'?sun:moon;try{localStorage.setItem('theme',t)}catch(e){}}
+  var saved=null;try{saved=localStorage.getItem('theme')}catch(e){}
+  set(saved||(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+  b.onclick=function(){set(root.getAttribute('data-theme')==='dark'?'light':'dark')};
+  var links=[].slice.call(document.querySelectorAll('.navrow a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var k=secs.indexOf(e.target);links.forEach(function(a,j){a.classList.toggle('on',j===k)})}})},{rootMargin:'-40% 0px -55% 0px'});
+    secs.forEach(function(s){s&&io.observe(s)});
+  }
+})();
+</script>
+</body>
+</html>
