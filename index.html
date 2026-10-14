@@ -109,6 +109,9 @@ h3{margin:0 0 4px;font-size:1.08rem}
 .status.done{background:#dcfce7;color:#166534}
 .status.pub{background:#ede9fe;color:#5b21b6}
 .proj p{font-size:.95rem;margin:10px 0 16px;flex:1}
+.proj.more{background:var(--pill);border-style:dashed;color:var(--ink);justify-content:center;text-decoration:none}
+.proj.more:hover{filter:brightness(.98)}
+.proj.more p{flex:0}
 .proj .link{font-weight:600;font-size:.9rem;margin-top:12px}
 
 /* certs */
@@ -296,6 +299,23 @@ footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin
       <p>Transfer-learning model (DenseNet) classifying chest X-rays as COVID-19, bacterial pneumonia, viral pneumonia, or normal, with Grad-CAM heatmaps showing what drove each prediction.</p>
       <div class="pills"><span class="pill">Python</span><span class="pill">PyTorch</span><span class="pill">Medical Imaging</span></div>
     </div>
+    <div class="card proj">
+      <div class="head"><div><h3>Crop &amp; Plant Disease Recognition App</h3><div class="meta">Flutter · TensorFlow Lite</div></div><span class="status done">Completed</span></div>
+      <p>Mobile app for Android and iOS that identifies the crop and detects plant diseases from a camera or gallery photo, using a MobileNetV2 transfer-learning model converted to TensorFlow Lite to run on the phone.</p>
+      <div class="pills"><span class="pill">Python</span><span class="pill">TensorFlow</span><span class="pill">CNN</span><span class="pill">Flutter</span></div>
+      <a class="link" href="https://github.com/sussmasenthil/ai_based_crop_identification_disease_recognition" target="_blank" rel="noopener">View code →</a>
+    </div>
+    <div class="card proj">
+      <div class="head"><div><h3>Speaker Identification from Voice</h3><div class="meta">Python · scikit-learn</div></div><span class="status done">Completed</span></div>
+      <p>Extracted pitch, harmonic, percussive, and chroma features from audio with librosa, reduced them with PCA, and compared decision tree, KNN, naive Bayes, and random forest classifiers. Random forest performed best (75% test accuracy).</p>
+      <div class="pills"><span class="pill">Python</span><span class="pill">librosa</span><span class="pill">PCA</span><span class="pill">Classification</span></div>
+      <a class="link" href="https://github.com/sussmasenthil/Speaker-Identification" target="_blank" rel="noopener">View code →</a>
+    </div>
+    <a class="card proj more" href="https://github.com/sussmasenthil?tab=repositories" target="_blank" rel="noopener">
+      <h3>More on GitHub</h3>
+      <p>Code, notebooks, and READMEs for my projects. New analytics projects are added as I finish them.</p>
+      <span class="link">github.com/sussmasenthil →</span>
+    </a>
   </div>
 </div></section>
 
